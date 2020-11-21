@@ -61,6 +61,10 @@ class Heap{
         $this->heapifyUp();
     }
 
+    /**
+     * @return mixed
+     * @throws Exception
+     */
     public function pop(){
         if($this->size === 0){
             throw  new Exception("Heap is empty");
@@ -73,6 +77,9 @@ class Heap{
         return $item;
     }
 
+    /**
+     * @return array
+     */
     public function getItems(): array
     {
         return $this->items;
@@ -160,6 +167,10 @@ class Heap{
         return $this->items[$this->rightIndex($i)];
     }
 
+    /**
+     * @param int $index1
+     * @param int $index2
+     */
     private function swap(int $index1, int $index2)
     {
         $temp = $this->items[$index1];
@@ -168,6 +179,9 @@ class Heap{
         $this->items[$index2] = $temp;
     }
 
+    /***
+     * 
+     */
     private function ensureExtraCapacity()
     {
         if($this->size == $this->capasity){
@@ -176,6 +190,9 @@ class Heap{
         }
     }
 
+    /**
+     * heapify up
+     */
     public function heapifyUp()
     {
         $index = $this->size - 1;
@@ -185,7 +202,9 @@ class Heap{
         }
     }
 
-
+    /**
+     * heapyfy down
+     */
     private function heapifyDown(){
 
         $index = 0;
