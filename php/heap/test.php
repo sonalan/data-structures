@@ -1,6 +1,5 @@
-<?php
-include "Heap.php";
-$heap = new Heap();
+<?php include "Heap.php";
+$heap = new sonalan\heap\Heap();
 
 $heap->push(3);
 $heap->push(9);

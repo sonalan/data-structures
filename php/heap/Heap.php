@@ -1,4 +1,4 @@
-<?php
+<?php namespace sonalan\heap;
 
 class Heap{
 
@@ -180,7 +180,7 @@ class Heap{
     }
 
     /***
-     * 
+     *
      */
     private function ensureExtraCapacity()
     {
