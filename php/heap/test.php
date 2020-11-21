@@ -12,3 +12,5 @@ print_r($heap->getItems());
 $heap->pop();
 
 print_r($heap->getItems());
+echo $heap->peek();
+echo "\n";
