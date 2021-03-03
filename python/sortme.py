@@ -10,10 +10,22 @@ def insertionSort(arr):
     return arr
 
 
+'''
+bubbleSort implementation
+'''
+def bubbleSort(arr):
+    isSorted = False
+    while not isSorted:
+        isSorted = True
+        for i in  range(len(arr)-1):
+            if arr[i] > arr[i+1]:
+                swap(i,i+1,arr)
+                isSorted=False
+    return arr
 
 
 '''
-swap helper
+swap helper implementation
 '''
 def swap(i,j,arr):
     arr[i], arr[j] = arr[j] , arr[i]
